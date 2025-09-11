@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Anggita Kelani - Portofolio</title>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="index.html" class="-m-1.5 p-1.5 font-bold text-orange-600">
+            Anggita Kelani
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button type="button" command="show-modal" commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="index.html" class="text-sm font-bold text-black border-b-2 border-orange-600 pb-1">HOME</a>
+          <a href="about.html" class="text-sm font-bold text-black hover:text-orange-600">ABOUT</a>
+          <a href="portofolio.html" class="text-sm font-bold text-black hover:text-orange-600">PORTOFOLIO</a>
+          <a href="contact.html" class="text-sm font-bold text-black hover:text-orange-600">CONTACT</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Dialog -->
+      <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+          <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel
+              class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm">
+              <div class="flex items-center justify-between">
+                <a href="index.html" class="text-orange-600 font-bold">Anggita</a>
+                <button type="button" command="close" commandfor="mobile-menu"
+                  class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Close menu</span>
+                  <svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <div class="mt-6">
+                <a href="index.html" class="block py-2 font-bold text-black border-b-2 border-orange-600">HOME</a>
+                <a href="about.html" class="block py-2 font-bold text-black hover:text-orange-600">ABOUT</a>
+                <a href="portofolio.html" class="block py-2 font-bold text-black hover:text-orange-600">PORTOFOLIO</a>
+                <a href="contact.html" class="block py-2 font-bold text-black hover:text-orange-600">CONTACT</a>
+              </div>
+            </el-dialog-panel>
+          </div>
+        </dialog>
+      </el-dialog>
+    </header>
+
+    <!-- Hero Section dengan background gradasi -->
+    <div class="relative isolate px-6 pt-24 lg:px-8">
+      <!-- Background blur top -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72rem]">
+        </div>
+      </div>
+
+      <!-- Konten Hero -->
+      <div
+        class="mx-auto max-w-5xl py-16 sm:py-24 lg:py-28 flex flex-col lg:flex-row items-center gap-10">
+        <!-- Teks -->
+        <div class="text-center lg:text-left flex-1">
+          <h1 class="text-6xl sm:text-7xl font-extrabold tracking-tight text-gray-900">
+            Hi!<br> I'm <span class="text-orange-600">Anggita Kelani</span>
+          </h1>
+          <p class="mt-4 text-xl leading-relaxed text-gray-600 max-w-xl">
+            Saya adalah seorang mahasiswa Sistem Informasi di Universitas Pendidikan Ganesha (Undiksha)
+            semester 3 yang tertarik pada pengembangan teknologi dan inovasi digital.
+          </p>
+          <div class="mt-6 flex items-center justify-center lg:justify-start gap-x-6">
+            <a href="about.html"
+              class="rounded-md bg-orange-600 px-5 py-2.5 text-base font-semibold text-white hover:bg-orange-500">
+              View More
+            </a>
+          </div>
+        </div>
+        <!-- Foto -->
+        <div class="flex-shrink-0">
+          <img src="foto_diri.jpg" alt="Foto Anggita"
+            class="w-80 h-80 object-cover rounded-full border-4 border-orange-600 shadow-lg">
+        </div>
+      </div>
+
+      <!-- Background blur bottom -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]">
+        </div>
+      </div>
+  </body>
+</html>

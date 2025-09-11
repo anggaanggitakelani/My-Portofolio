@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Portfolio - Anggita Kelani</title>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="index.html" class="-m-1.5 p-1.5 font-bold text-orange-600">
+            Anggita Kelani
+          </a>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="index.html" class="text-sm font-bold text-black hover:text-orange-600">HOME</a>
+          <a href="about.html" class="text-sm font-bold text-black hover:text-orange-600">ABOUT</a>
+          <a href="portofolio.html" class="text-sm font-bold text-black border-b-2 border-orange-600 pb-1">PORTOFOLIO</a>
+          <a href="contact.html" class="text-sm font-bold text-black hover:text-orange-600">CONTACT</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Portfolio Section dengan background gradasi -->
+    <div class="relative isolate px-6 pt-16 lg:px-8">
+      <!-- Background blur top -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72rem]">
+        </div>
+      </div>
+
+      <!-- Konten Portfolio -->
+      <div class="mx-auto max-w-6xl py-10 sm:py-16 lg:py-20">
+        <!-- Judul -->
+        <div class="text-center mb-10">
+          <h2 class="text-5xl font-extrabold text-gray-900">My Portofolio</h2>
+          <p class="mt-3 text-lg text-gray-700">
+            Beberapa hasil karya dan proyek yang pernah saya buat.
+          </p>
+        </div>
+
+        <!-- Grid Gambar + Deskripsi -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Item 1 -->
+          <div class="rounded-lg overflow-hidden shadow-lg border border-orange-200 bg-white">
+            <img src="JD_Money.png" alt="Portfolio 1" class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold text-gray-900">JD Money</h3>
+              <p class="mt-2 text-gray-600 text-sm">
+                Distro OS yang bertemakan ekonomi untuk membantu masyarakat mengelola UMKM.
+              </p>
+              <a href="https://drive.google.com/drive/folders/1uKTn3sBVkhQm8x89pfJ93wGrklFsWxjy?usp=drive_link"
+                class="mt-4 inline-block bg-orange-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-orange-500">
+                Link Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="rounded-lg overflow-hidden shadow-lg border border-orange-200 bg-white">
+            <img src="VR_Museum.png" alt="Portfolio 2" class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold text-gray-900">VR Museum Digital</h3>
+              <p class="mt-2 text-gray-600 text-sm">
+                Museum digital berbasis VR agar masyarakat bisa mengenal Kain Endek secara interaktif.
+              </p>
+              <a href="https://drive.google.com/drive/folders/19h-vDDyGTYnH0-Ywqk2qPWgImx8H4wLE?usp=drive_link"
+                class="mt-4 inline-block bg-orange-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-orange-500">
+                Link Project
+              </a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="rounded-lg overflow-hidden shadow-lg border border-orange-200 bg-white">
+            <img src="BMI.jpg" alt="Portfolio 3" class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold text-gray-900">Hitung BMI</h3>
+              <p class="mt-2 text-gray-600 text-sm">
+                Form sederhana untuk menghitung Body Mass Index menggunakan HTML, CSS, dan JavaScript.
+              </p>
+              <a href="hitung_bmi.html"
+                class="mt-4 inline-block bg-orange-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-orange-500">
+                Start
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background blur bottom -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

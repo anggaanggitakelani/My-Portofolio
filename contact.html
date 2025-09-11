@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Contact - Anggita Kelani</title>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="index.html" class="-m-1.5 p-1.5 font-bold text-orange-600">
+            Anggita Kelani
+          </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button type="button" command="show-modal" commandfor="mobile-menu"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="index.html" class="text-sm font-bold text-black hover:text-orange-600">HOME</a>
+          <a href="about.html" class="text-sm font-bold text-black hover:text-orange-600">ABOUT</a>
+          <a href="portofolio.html" class="text-sm font-bold text-black hover:text-orange-600">PORTOFOLIO</a>
+          <a href="contact.html" class="text-sm font-bold text-black border-b-2 border-orange-600 pb-1">CONTACT</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact Section dengan background gradasi -->
+    <div class="relative isolate px-6 pt-24 lg:px-8">
+      <!-- Background blur top -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72rem]">
+        </div>
+      </div>
+
+      <!-- Konten Contact -->
+      <div class="mx-auto max-w-6xl py-16 sm:py-24 lg:py-28 flex flex-col lg:flex-row items-start gap-12">
+        <!-- Deskripsi -->
+        <div class="flex-1">
+          <h2 class="text-5xl font-extrabold text-gray-900">Contact Me</h2>
+          <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+            Jika Anda ingin berdiskusi, berkolaborasi, atau sekadar menyapa, silakan isi formulir di samping.
+            Saya akan segera merespon pesan Anda.
+          </p>
+          <div class="mt-6">
+            <p class="text-gray-600"><strong>Email:</strong> anggaanggita@student.undiksha.ac.id</p>
+            <p class="text-gray-600"><strong>Telepon:</strong> +62 812-4600-0000</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="flex-1 bg-white p-8 rounded-xl shadow-lg border border-orange-200">
+          <form id="contactForm" action="#" method="POST" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-semibold text-gray-900">Nama</label>
+              <input type="text" id="name" name="name"
+                class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm p-3 border">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold text-gray-900">Email</label>
+              <input type="email" id="email" name="email"
+                class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm p-3 border">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-900">Pesan</label>
+              <textarea id="message" name="message" rows="4"
+                class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500 sm:text-sm p-3 border"></textarea>
+            </div>
+            <div>
+              <button type="submit"
+                class="w-full rounded-md bg-orange-600 px-4 py-2.5 text-white font-semibold hover:bg-orange-500">
+                Kirim Pesan
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Background blur bottom -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast notifikasi -->
+    <div id="toast" class="fixed bottom-6 right-6 hidden items-center gap-2 rounded-lg bg-green-500 px-4 py-2 text-white shadow-lg">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+      </svg>
+      <span>Berhasil</span>
+    </div>
+
+    <!-- Script JS -->
+    <script src="contact.js"></script>
+  </body>
+</html>

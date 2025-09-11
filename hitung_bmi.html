@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Hitung BMI</title>
+  </head>
+  <body class="bg-white">
+    <!-- Navbar -->
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="hitung_bmi.html" class="-m-1.5 p-1.5 font-bold text-orange-600">
+          </a>
+      </nav>
+    </header>
+
+    <!-- BMI Section dengan background gradasi -->
+    <div class="relative isolate px-6 pt-24 lg:px-8 min-h-screen flex items-center justify-center">
+      <!-- Background blur top -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72rem]">
+        </div>
+      </div>
+
+      <!-- Form BMI -->
+      <div class="mx-auto w-full max-w-2xl bg-white rounded-xl shadow-lg border border-orange-200 p-10 z-10">
+        <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-6">Hitung BMI</h2>
+        
+        <!-- Notifikasi Error -->
+        <div id="errorBox" class="hidden mb-6 p-4 rounded-md bg-red-100 border border-red-400 text-red-700 text-center font-semibold">
+          Harap masukkan input valid berupa angka!
+        </div>
+
+        <form id="bmiForm" class="space-y-8">
+          <div>
+            <label class="block text-lg font-semibold text-gray-700 mb-2">Berat Badan (kg)</label>
+            <input type="text" id="weight" placeholder="Masukkan berat badan (kg)"
+              class="w-full border rounded-md px-5 py-3 text-lg focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-lg font-semibold text-gray-700 mb-2">Tinggi Badan (cm)</label>
+            <input type="text" id="height" placeholder="Masukkan tinggi badan (cm)"
+              class="w-full border rounded-md px-5 py-3 text-lg focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+          </div>
+          <button type="button" onclick="calculateBMI()"
+            class="w-full bg-orange-600 text-white text-lg font-semibold px-6 py-3 rounded-md hover:bg-orange-500">
+            Hitung
+          </button>
+        </form>
+
+        <!-- Hasil -->
+        <div id="result" class="mt-8 text-center text-xl font-bold text-gray-800"></div>
+
+        <!-- Tombol kembali -->
+        <div class="mt-8 text-center">
+          <a href="portofolio.html"
+            class="inline-block bg-gray-200 text-gray-800 font-semibold px-6 py-3 rounded-md hover:bg-gray-300">
+            ← Kembali ke Portofolio
+          </a>
+        </div>
+      </div>
+
+      <!-- Background blur bottom -->
+      <div aria-hidden="true"
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+        <div
+          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+          class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36rem] -translate-x-1/2 bg-gradient-to-tr from-orange-300 to-orange-600 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72rem]">
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script>
+      function calculateBMI() {
+        const weight = document.getElementById("weight").value.trim();
+        const height = document.getElementById("height").value.trim();
+        const result = document.getElementById("result");
+        const errorBox = document.getElementById("errorBox");
+
+        // Reset tampilan error setiap klik
+        errorBox.classList.add("hidden");
+        result.textContent = "";
+
+        // Validasi input angka
+        if (isNaN(weight) || isNaN(height) || weight === "" || height === "") {
+          errorBox.classList.remove("hidden");
+          return;
+        }
+
+        const w = parseFloat(weight);
+        const h = parseFloat(height) / 100; // ubah cm ke meter
+        const bmi = (w / (h * h)).toFixed(2);
+
+        let status = "";
+        if (bmi < 18.5) status = "Kurus";
+        else if (bmi < 24.9) status = "Normal";
+        else if (bmi < 29.9) status = "Berat badan berlebih";
+        else status = "Obesitas";
+
+        result.textContent = `BMI Anda: ${bmi} (${status})`;
+      }
+    </script>
+  </body>
+</html>
